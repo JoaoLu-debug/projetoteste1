@@ -154,6 +154,47 @@ section {
   filter: blur(0);
 }
 
+.reveal-card {
+  opacity: 0;
+  clip-path: inset(100% 0 0 0);
+  transform: translateY(60px);
+  transition: opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1),
+              clip-path 1.4s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-card.visible {
+  opacity: 1;
+  clip-path: inset(0% 0 0% 0);
+  transform: translateY(0);
+}
+
+.reveal-card .card-img {
+  transform: scale(1.15) translateY(30px);
+  transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-card.visible .card-img {
+  transform: scale(1) translateY(0);
+}
+
+.reveal-card .card-content > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-card.visible .card-content > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-card.visible .card-content > *:nth-child(1) { transition-delay: 300ms; }
+.reveal-card.visible .card-content > *:nth-child(2) { transition-delay: 450ms; }
+.reveal-card.visible .card-content > *:nth-child(3) { transition-delay: 600ms; }
+
 /* Delay modifiers for staggered entries */
 .delay-100 { transition-delay: 100ms; }
 .delay-200 { transition-delay: 200ms; }
@@ -201,15 +242,6 @@ header.scrolled {
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 700;
-}
-
-.logo-symbol {
-  width: 10px;
-  height: 10px;
-  background-color: var(--color-accent);
-  border-radius: 50%;
-  display: inline-block;
-  box-shadow: 0 0 10px var(--color-accent);
 }
 
 .nav-links {
@@ -350,31 +382,13 @@ header.scrolled {
 }
 
 .hero-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border: 1px solid var(--color-border);
-  padding: 0.4rem 1rem;
-  border-radius: 100px;
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  margin-bottom: 2rem;
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.hero-tag-dot {
-  width: 6px;
-  height: 6px;
-  background-color: var(--color-accent);
-  border-radius: 50%;
-  animation: pulse-glow 2s infinite;
-}
-
-@keyframes pulse-glow {
-  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 92, 0, 0.7); }
-  70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(255, 92, 0, 0); }
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 92, 0, 0); }
+  margin-bottom: 1.5rem;
+  color: var(--color-accent);
+  font-weight: 700;
 }
 
 .hero-title {
@@ -949,11 +963,4 @@ footer {
     right: 1.5rem;
     padding: 0.4rem 0.8rem;
   }
-}
-
-.altitude-dot {
-  width: 6px;
-  height: 6px;
-  background-color: var(--color-accent);
-  border-radius: 50%;
 }

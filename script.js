@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   // --- SCROLL-REVEAL OBSERVER ---
-  const revealElements = document.querySelectorAll('.reveal');
+  const revealElements = document.querySelectorAll('.reveal, .reveal-card');
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
