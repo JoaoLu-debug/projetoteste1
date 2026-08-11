@@ -154,7 +154,7 @@ section {
   filter: blur(0);
 }
 
-.reveal-card {
+.reveal-card .bento-card-inner {
   opacity: 0;
   clip-path: inset(100% 0 0 0);
   transform: translateY(60px);
@@ -163,7 +163,7 @@ section {
               transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.reveal-card.visible {
+.reveal-card.visible .bento-card-inner {
   opacity: 1;
   clip-path: inset(0% 0 0% 0);
   transform: translateY(0);
