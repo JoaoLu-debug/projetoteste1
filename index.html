@@ -3,314 +3,229 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NARRATIVE — Cinematic Travel Curation & Film Production</title>
-  <meta name="description" content="Narrative is a luxury travel planning and cinematic film editing studio mapping raw topography and silent dialogues through 16mm film and curated itineraries.">
+  <title>NARRATIVE — Travel Curation & Cinematic Film Studio</title>
+  <meta name="description" content="Contemporary Swiss-style portfolio for Narrative, a creative studio curating editorial travel itineraries and cinematic films.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Background Film Grain Overlay -->
-  <div class="grain-overlay"></div>
+  <!-- Minimalist Top Navigation -->
+  <header class="main-header">
+    <div class="nav-container">
+      <a href="#home" class="logo">STUDIO NARRATIVE</a>
+      <nav class="nav-menu">
+        <a href="#projects">PROJECTS</a>
+        <a href="#fragments">FRAGMENTS</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </div>
+  </header>
 
-  <!-- Technical Grid Overlay (Minimal editorial layout lines) -->
-  <div class="grid-overlay">
-    <div class="grid-line"></div>
-    <div class="grid-line"></div>
-    <div class="grid-line"></div>
-  </div>
+  <main class="content-wrapper">
 
-  <div class="site-wrapper">
-    
-    <!-- Top Large Banner Title (Reference Image Layout 1) -->
-    <section class="banner-section">
-      <h1 class="main-title font-display">NARRATIVE</h1>
-      
-      <div class="header-nav-row font-mono">
-        <div class="nav-col-left">STUDIO NARRATIVE</div>
-        <div class="nav-col-center">BASED ON TASHKENT // 15 YEARS OF CINEMATIC DIGITAL EXPERIENCE</div>
-        <nav class="nav-col-links">
-          <a href="#home">HOME</a>
-          <a href="#index">FEATURED WORKS</a>
-          <a href="#about">ABOUT</a>
-          <a href="#contact">CONTACT</a>
-        </nav>
-      </div>
-    </section>
-
-    <!-- Hero Image Section (Reference Image Layout 1) -->
+    <!-- Hero Section -->
     <section id="home" class="hero-section reveal">
-      <div class="hero-image-wrapper">
-        <img src="images/hero_travel.jpg" alt="Cinematic travel sunset on Amalfi Coast" class="hero-image">
+      <div class="hero-text-block">
+        <h1 class="hero-title">NARRATIVE</h1>
+        <p class="hero-desc">
+          An editorial travel planning and cinematic film editing studio. We map natural landscape topographies and curate architectural route guides, documenting experiences through 16mm film and precise design.
+        </p>
       </div>
       
-      <div class="hero-caption-row font-mono">
-        <span>[ EXPEDITION FILE // REF-017 ]</span>
-        <span id="geo-val">COORDINATES: 45.8918° N, 120.3019° W</span>
-        <span>ALTITUDE: <strong id="altitude-val">2100M</strong></span>
-      </div>
-      
-      <!-- Hand-drawn Annotation (Scribble arrow pointing to hero) -->
-      <div class="handwritten-annotation hero-annotation">
-        <svg class="handwrite-arrow" viewBox="0 0 100 50" width="80" height="40" fill="none" stroke="var(--color-accent-terracotta)" stroke-width="1.5">
-          <path d="M5,40 Q40,10 85,25" />
-          <path d="M75,18 L85,25 L78,35" />
-        </svg>
-        <span class="handwrite-text">Capture the silent topography</span>
-      </div>
-    </section>
-
-    <!-- Main Content Split Grid (Reference Image Layout 2) -->
-    <section id="index" class="split-grid-section">
-      <div class="split-container">
-        
-        <!-- Left Column: Portrait & Text -->
-        <div class="grid-col-left reveal">
-          <div class="col-content-wrap">
-            <h2 class="sub-brand-title font-display">NARRATIVE</h2>
-            <p class="studio-intro font-serif">
-              Studio Narrative creates editorial travel scripts and cinematic films, mapping the silent dialogue between landscape topography and raw architectural objects.
-            </p>
-            
-            <div class="small-portrait-wrapper">
-              <img src="images/hero_travel.jpg" alt="Filmmaker mapping high-altitude trails" class="portrait-img">
-              
-              <!-- Hand-drawn circle annotation -->
-              <div class="handwritten-annotation portrait-annotation">
-                <svg class="handwrite-circle" viewBox="0 0 120 120" width="110" height="110" fill="none" stroke="var(--color-accent-terracotta)" stroke-width="1.5" stroke-dasharray="3 3">
-                  <ellipse cx="60" cy="60" rx="50" ry="40" transform="rotate(-15 60 60)" />
-                </svg>
-                <span class="handwrite-text text-side">Topography Scan</span>
-              </div>
-            </div>
-          </div>
+      <div class="hero-image-block">
+        <div class="image-aspect-3-2">
+          <img src="images/hero_travel.jpg" alt="Sunset over cliffside coastline, desaturated colors" class="editorial-img">
         </div>
-
-        <!-- Right Column: Interactive Works Index -->
-        <div class="grid-col-right reveal">
-          <div class="index-header font-mono">
-            <span>SELECTED COMMISSIONS</span>
-            <span>[ TRAVEL & EDITING ]</span>
-          </div>
-
-          <div class="interactive-index-list">
-            
-            <!-- Index Item 1 (Amalfi Coast) -->
-            <div class="index-item active" data-img="images/amalfi_thumb.jpg" data-coords="COORD // 40.62 N" data-medium="16MM FILM + ROAD TRIP">
-              <div class="item-main-row">
-                <span class="item-name font-serif">AMALFI FRAGMENTS</span>
-                
-                <!-- Hover Thumbnail Strip -->
-                <div class="item-thumbs">
-                  <img src="images/amalfi_thumb.jpg" alt="Amalfi thumbnail" class="mini-thumb">
-                  <img src="images/hero_travel.jpg" alt="Amalfi thumbnail 2" class="mini-thumb">
-                </div>
-                
-                <span class="item-category font-mono">ITALY</span>
-              </div>
-              <div class="item-details font-mono">
-                <div class="detail-block">
-                  <span class="lbl">Itinerary Length:</span>
-                  <span class="val">08 Days / Tyrrhenian Route</span>
-                </div>
-                <div class="detail-block">
-                  <span class="lbl">Cinematography:</span>
-                  <span class="val">Arri SR3, Kodak Vision3 250D</span>
-                </div>
-                <div class="detail-block">
-                  <span class="lbl">Curation Spec:</span>
-                  <span class="val">Brutalist villas, cliff paths, vintage Alfa Romeo</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Index Item 2 (Kyoto Temples) -->
-            <div class="index-item" data-img="images/kyoto_thumb.jpg" data-coords="COORD // 35.01 N" data-medium="8MM SILENT + TEMPLE ROUTE">
-              <div class="item-main-row">
-                <span class="item-name font-serif">KYOTO SHADOWS</span>
-                
-                <!-- Hover Thumbnail Strip -->
-                <div class="item-thumbs">
-                  <img src="images/kyoto_thumb.jpg" alt="Kyoto thumbnail" class="mini-thumb">
-                  <img src="images/hero_travel.jpg" alt="Kyoto thumbnail 2" class="mini-thumb">
-                </div>
-                
-                <span class="item-category font-mono">JAPAN</span>
-              </div>
-              <div class="item-details font-mono">
-                <div class="detail-block">
-                  <span class="lbl">Itinerary Length:</span>
-                  <span class="val">05 Days / Zen Garden Mapping</span>
-                </div>
-                <div class="detail-block">
-                  <span class="lbl">Cinematography:</span>
-                  <span class="val">Bolex H8, Black & White Tri-X</span>
-                </div>
-                <div class="detail-block">
-                  <span class="lbl">Curation Spec:</span>
-                  <span class="val">Minimalist temples, rock gardens, bamboo paths</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Index Item 3 (Sahara Nomadic Paths) -->
-            <div class="index-item" data-img="images/sahara_thumb.jpg" data-coords="COORD // 24.88 N" data-medium="16MM COLOR + INQUIRY GUIDE">
-              <div class="item-main-row">
-                <span class="item-name font-serif">SAHARA DUNES</span>
-                
-                <!-- Hover Thumbnail Strip -->
-                <div class="item-thumbs">
-                  <img src="images/sahara_thumb.jpg" alt="Sahara thumbnail" class="mini-thumb">
-                  <img src="images/hero_travel.jpg" alt="Sahara thumbnail 2" class="mini-thumb">
-                </div>
-                
-                <span class="item-category font-mono">MOROCCO</span>
-              </div>
-              <div class="item-details font-mono">
-                <div class="detail-block">
-                  <span class="lbl">Itinerary Length:</span>
-                  <span class="val">10 Days / Nomadic Crossings</span>
-                </div>
-                <div class="detail-block">
-                  <span class="lbl">Cinematography:</span>
-                  <span class="val">Aaton XTR, Kodak Ektachrome 100D</span>
-                </div>
-                <div class="detail-block">
-                  <span class="lbl">Curation Spec:</span>
-                  <span class="val">Dune topography, desert camps, star coordinates</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Index Item 4 (Patagonia Glaciers) -->
-            <div class="index-item" data-img="images/landscape_footer.jpg" data-coords="COORD // 50.15 S" data-medium="DIGITAL CINEMA + EXPEDITION">
-              <div class="item-main-row">
-                <span class="item-name font-serif">PATAGONIA ICE</span>
-                
-                <!-- Hover Thumbnail Strip -->
-                <div class="item-thumbs">
-                  <img src="images/landscape_footer.jpg" alt="Patagonia thumbnail" class="mini-thumb">
-                  <img src="images/hero_travel.jpg" alt="Patagonia thumbnail 2" class="mini-thumb">
-                </div>
-                
-                <span class="item-category font-mono">ARGENTINA</span>
-              </div>
-              <div class="item-details font-mono">
-                <div class="detail-block">
-                  <span class="lbl">Itinerary Length:</span>
-                  <span class="val">12 Days / Glacial Navigation</span>
-                </div>
-                <div class="detail-block">
-                  <span class="lbl">Cinematography:</span>
-                  <span class="val">Red V-Raptor, Cooke Anamorphic</span>
-                </div>
-                <div class="detail-block">
-                  <span class="lbl">Curation Spec:</span>
-                  <span class="val">Brutalist ice structures, volcanic wind mapping</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
+        <div class="image-caption">
+          <span>EXPEDITION REF-017 / AMALFI EXPEDITION</span>
+          <span>45.8918° N, 120.3019° W</span>
         </div>
       </div>
     </section>
 
-    <!-- Manifesto & Specifications (Reference Image Layout 3 - Bottom Left) -->
-    <section id="about" class="about-specs-section">
-      <div class="split-container">
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section reveal">
+      <div class="section-header">
+        <h2 class="section-title">PROJECTS</h2>
+        <span class="section-meta">SELECTED WORKS INDEX</span>
+      </div>
+
+      <div class="projects-list">
         
-        <!-- Left Panel: Text manifesto -->
-        <div class="about-manifesto reveal">
-          <h2 class="large-manifesto-headline font-display">CREATING NEXT LEVEL DIGITAL PRODUCTS</h2>
-          <span class="manifesto-cursive font-heading">The Travel Curation & Cinematic Manifesto</span>
-          <p class="manifesto-body font-serif">
-            We do not design typical tourist itineraries or commercial films. Narrative approach treats every travel route as a storyboard and every editing frame as a coordinate point. We map luxury experiences where landscape topography meets artistic film composition.
+        <!-- Project 1 -->
+        <div class="project-row active" data-img="images/amalfi_thumb.jpg">
+          <div class="project-num">01</div>
+          <div class="project-info">
+            <h3 class="project-name">AMALFI FRAGMENTS</h3>
+            <p class="project-summary">An 8-day cinematic road mapping along the Tyrrhenian coast, documenting brutalist concrete villas and historic paths on 16mm analog film.</p>
+          </div>
+          <div class="project-location">ITALY</div>
+          <div class="project-year">2026</div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-row" data-img="images/kyoto_thumb.jpg">
+          <div class="project-num">02</div>
+          <div class="project-info">
+            <h3 class="project-name">KYOTO SHADOWS</h3>
+            <p class="project-summary">A travel itinerary and silent film study focused on Zen garden architecture, mapping spatial stillness and bamboo forest routes.</p>
+          </div>
+          <div class="project-location">JAPAN</div>
+          <div class="project-year">2025</div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-row" data-img="images/sahara_thumb.jpg">
+          <div class="project-num">03</div>
+          <div class="project-info">
+            <h3 class="project-name">SAHARA NOMADIC PATHS</h3>
+            <p class="project-summary">A 10-day crossing mapping desert dune topography and campsite coordinates, editing visual archives with warm color palettes.</p>
+          </div>
+          <div class="project-location">MOROCCO</div>
+          <div class="project-year">2025</div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-row" data-img="images/landscape_footer.jpg">
+          <div class="project-num">04</div>
+          <div class="project-info">
+            <h3 class="project-name">PATAGONIA ICE FIELD</h3>
+            <p class="project-summary">Documenting glacial navigation routes and high-wind weather resistance, producing a cinematic documentary of volcanic peaks.</p>
+          </div>
+          <div class="project-location">ARGENTINA</div>
+          <div class="project-year">2024</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Fragments Section -->
+    <section id="fragments" class="fragments-section reveal">
+      <div class="section-header">
+        <h2 class="section-title">FRAGMENTS</h2>
+        <span class="section-meta">VISUAL LANDSCAPES ARCHIVE</span>
+      </div>
+
+      <div class="fragments-grid">
+        
+        <!-- Grid Item 1 (Aspect 4:5) -->
+        <div class="fragment-card aspect-4-5">
+          <div class="img-container">
+            <img src="images/amalfi_thumb.jpg" alt="Amalfi coast stone arches" class="editorial-img">
+          </div>
+          <div class="card-caption">
+            <span>ARCHES / COORD // 40.62 N</span>
+            <span>4:5 ASPECT</span>
+          </div>
+        </div>
+
+        <!-- Grid Item 2 (Aspect 3:2) -->
+        <div class="fragment-card aspect-3-2">
+          <div class="img-container">
+            <img src="images/kyoto_thumb.jpg" alt="Kyoto wooden temple" class="editorial-img">
+          </div>
+          <div class="card-caption">
+            <span>TEMPLE / COORD // 35.01 N</span>
+            <span>3:2 ASPECT</span>
+          </div>
+        </div>
+
+        <!-- Grid Item 3 (Widescreen Panorama) -->
+        <div class="fragment-card aspect-panorama">
+          <div class="img-container">
+            <img src="images/sahara_thumb.jpg" alt="Sahara desert sunset dunes" class="editorial-img">
+          </div>
+          <div class="card-caption">
+            <span>DESERT / COORD // 24.88 N</span>
+            <span>PANORAMIC ASPECT</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section reveal">
+      <div class="about-grid">
+        <div class="about-title-col">
+          <h2 class="section-title">ABOUT</h2>
+          <span class="section-meta">OUR METHODOLOGY</span>
+        </div>
+        <div class="about-desc-col">
+          <p class="about-paragraph">
+            Studio Narrative operates at the intersection of travel curation and cinematic film production. We view landscape routes not just as destinations, but as structured storyboards waiting to be documented.
           </p>
-          <div class="editorial-specs-box font-mono">
-            <div class="spec-heading">TECHNICAL PROTOCOLS //</div>
-            <div class="spec-row"><span>Itinerary Curation</span><span>LIDAR Grid Mapping, Satellite Navigation</span></div>
-            <div class="spec-row"><span>Cinematography Core</span><span>16mm Analog Curation, Anamorphic Optics</span></div>
-            <div class="spec-row"><span>Audio Landscapes</span><span>Binaural Field Recordings of Winds & Tectonics</span></div>
+          <p class="about-paragraph text-muted">
+            Our process merges detailed logistical travel planning with traditional film editing methods. Using 16mm analog film, natural audio recordings, and geographic metadata, we build immersive route guides that serve as tools for physical and visual exploration.
+          </p>
+          
+          <div class="methodology-list">
+            <div class="methodology-item">
+              <span class="item-title">ROUTE ANALYSIS</span>
+              <span class="item-desc">We compile coordinate guides, terrain elevation mapping, and historical context briefs for each path.</span>
+            </div>
+            <div class="methodology-item">
+              <span class="item-title">CINEMATIC ARCHIVE</span>
+              <span class="item-desc">Every journey is captured on real analog film, focusing on composition, natural lighting, and zero artificial rendering.</span>
+            </div>
           </div>
         </div>
-
-        <!-- Right Panel: Vertical Navigation & Scenic Landscape (Reference Image Layout 3 - Bottom Right) -->
-        <div class="about-navigation reveal">
-          <div class="nav-links-column">
-            <a href="#home" class="nav-row-link active">
-              <span class="num">01</span>
-              <span class="text">HOME</span>
-              <span class="arrow">→</span>
-            </a>
-            <a href="#index" class="nav-row-link">
-              <span class="num">02</span>
-              <span class="text">INDEX</span>
-              <span class="arrow">→</span>
-            </a>
-            <a href="#about" class="nav-row-link">
-              <span class="num">03</span>
-              <span class="text">SPECS</span>
-              <span class="arrow">→</span>
-            </a>
-            <a href="#contact" class="nav-row-link">
-              <span class="num">04</span>
-              <span class="text">CONTACT</span>
-              <span class="arrow">→</span>
-            </a>
-          </div>
-
-          <!-- Rolling Hills Landscape Image Beneath Vertical Navigation -->
-          <div class="scenic-footer-image-wrapper">
-            <img src="images/landscape_footer.jpg" alt="Rolling green hills overlooking ocean" class="scenic-img">
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- Contact & Transmission Section -->
+    <!-- Contact Section -->
     <section id="contact" class="contact-section reveal">
-      <div class="contact-container">
-        <div class="contact-header">
-          <h2 class="font-display">TRANSMIT SIGNAL</h2>
-          <span class="cursive-sub font-heading">Book an inquiry or custom travel film curation</span>
+      <div class="contact-grid">
+        <div class="contact-info-col">
+          <h2 class="section-title">CONTACT</h2>
+          <p class="contact-email">inquiries@studionarrative.com</p>
+          
+          <div class="contact-details font-mono">
+            <div class="detail-row">
+              <span>LOCATION</span>
+              <span>TASHKENT, UZBEKISTAN</span>
+            </div>
+            <div class="detail-row">
+              <span>COORDINATES</span>
+              <span>41.2995° N, 69.2401° E</span>
+            </div>
+            <div class="detail-row">
+              <span>ESTABLISHED</span>
+              <span>2011</span>
+            </div>
+          </div>
         </div>
-        
-        <form id="contact-form" class="inquiry-form">
-          <div class="form-row-grid">
+
+        <div class="contact-form-col">
+          <form id="contact-form" class="editorial-form">
             <div class="form-group">
-              <label for="name" class="font-mono">IDENTIFIER / NAME</label>
-              <input type="text" id="name" name="name" required class="form-input" placeholder="e.g. Explorer Alpha">
+              <label for="name">NAME / IDENTIFIER</label>
+              <input type="text" id="name" name="name" required placeholder="Your name">
             </div>
-            
             <div class="form-group">
-              <label for="email" class="font-mono">SIGNAL FREQUENCY / EMAIL</label>
-              <input type="email" id="email" name="email" required class="form-input" placeholder="e.g. name@domain.com">
+              <label for="email">EMAIL / SIGNAL FREQUENCY</label>
+              <input type="email" id="email" name="email" required placeholder="Your email address">
             </div>
-          </div>
-          
-          <div class="form-group">
-            <label for="message" class="font-mono">SIGNAL CONTENT / MESSAGE & INQUIRY DETAILS</label>
-            <textarea id="message" name="message" required class="form-input" placeholder="Specify your route plans or film editing requests..."></textarea>
-          </div>
-          
-          <button type="submit" class="btn-submit font-mono">
-            <span>TRANSMIT INQUIRY</span>
-            <span class="arrow">↗</span>
-          </button>
-        </form>
+            <div class="form-group">
+              <label for="message">MESSAGE / INQUIRY DETAILS</label>
+              <textarea id="message" name="message" required placeholder="Describe your expedition or film editing project details..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">TRANSMIT INQUIRY</button>
+          </form>
+        </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer font-mono">
-      <div class="footer-container">
-        <p>© 2026 NARRATIVE STUDIO. ALL RIGHTS RESERVED. DESIGN BY ESTÚDIO 017.</p>
-        <p>COORDINATE REGISTER SYTEM V1.04</p>
-      </div>
-    </footer>
+  </main>
 
-  </div>
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <span>© 2026 NARRATIVE STUDIO. ALL RIGHTS RESERVED.</span>
+      <span>DESIGN BY ESTÚDIO 017.</span>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
