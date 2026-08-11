@@ -3,290 +3,314 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALTAR° — Technical Art Portfolio & Exploration</title>
-  <meta name="description" content="Altar° is a high-end luxury art portfolio and exploration platform merging brutalist sculpture, high-altitude landscape topography, and outdoor performance aesthetics.">
+  <title>NARRATIVE — Cinematic Travel Curation & Film Production</title>
+  <meta name="description" content="Narrative is a luxury travel planning and cinematic film editing studio mapping raw topography and silent dialogues through 16mm film and curated itineraries.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Fine Technical Grid Overlay (Visual structure) -->
+  <!-- Background Film Grain Overlay -->
+  <div class="grain-overlay"></div>
+
+  <!-- Technical Grid Overlay (Minimal editorial layout lines) -->
   <div class="grid-overlay">
     <div class="grid-line"></div>
     <div class="grid-line"></div>
     <div class="grid-line"></div>
-    <div class="grid-line"></div>
   </div>
 
-  <!-- Dynamic Elevation/Altitude Counter -->
-  <div class="altitude-overlay">
-    <span>ALTITUDE: <strong id="altitude-val">2100M</strong></span>
-  </div>
-
-  <!-- Header Navigation -->
-  <header>
-    <div class="nav-container">
-      <a href="#home" class="logo">
-        ALTAR°
-      </a>
-      <nav class="nav-links">
-        <a href="#home" class="active">Home</a>
-        <a href="#works">Works</a>
-        <a href="#specs">Specs</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="menu-toggle" aria-label="Toggle Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-bg"></div>
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-content-block">
-          <div class="hero-tag">
-            EXPEDITION ALTA-017 / COMPLETED
-          </div>
-          <h1 class="hero-title font-display">ALTAR°</h1>
-          <p class="hero-desc">
-            A luxury artistic project mapping the silent dialogue between high-altitude topography, brutalist geometries, and raw environmental elements. Designed as structural tools for mental elevation.
-          </p>
-        </div>
-        <div class="hero-meta">
-          <div class="meta-item">
-            <span class="meta-label">COORDINATES</span>
-            <span class="meta-val" id="geo-val">45.8918° N, 120.3019° W</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">BASE ELEVATION</span>
-            <span class="meta-val">2,100 meters</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">MEDIUM</span>
-            <span class="meta-val">Brutalist Tectonic Art</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">CURATOR</span>
-            <span class="meta-val">Estúdio 017</span>
-          </div>
-        </div>
+  <div class="site-wrapper">
+    
+    <!-- Top Large Banner Title (Reference Image Layout 1) -->
+    <section class="banner-section">
+      <h1 class="main-title font-display">NARRATIVE</h1>
+      
+      <div class="header-nav-row font-mono">
+        <div class="nav-col-left">STUDIO NARRATIVE</div>
+        <div class="nav-col-center">BASED ON TASHKENT // 15 YEARS OF CINEMATIC DIGITAL EXPERIENCE</div>
+        <nav class="nav-col-links">
+          <a href="#home">HOME</a>
+          <a href="#index">FEATURED WORKS</a>
+          <a href="#about">ABOUT</a>
+          <a href="#contact">CONTACT</a>
+        </nav>
       </div>
-    </div>
-    <div class="scroll-indicator">
-      <span>SCROLL EXPEDITION</span>
-      <div class="scroll-indicator-line"></div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Works Gallery Section -->
-  <section id="works">
-    <div class="container">
-      <div class="section-header reveal">
-        <div>
-          <div class="section-num">01 / ARCHIVE</div>
-          <h2 class="section-title font-heading">SELECTED WORKS</h2>
-        </div>
-        <p class="section-sub">
-          A physical manifestation of landscape coordinates. Architectural objects placed on volcanic peaks and harsh mountain ridges.
-        </p>
+    <!-- Hero Image Section (Reference Image Layout 1) -->
+    <section id="home" class="hero-section reveal">
+      <div class="hero-image-wrapper">
+        <img src="images/hero_travel.jpg" alt="Cinematic travel sunset on Amalfi Coast" class="hero-image">
       </div>
+      
+      <div class="hero-caption-row font-mono">
+        <span>[ EXPEDITION FILE // REF-017 ]</span>
+        <span id="geo-val">COORDINATES: 45.8918° N, 120.3019° W</span>
+        <span>ALTITUDE: <strong id="altitude-val">2100M</strong></span>
+      </div>
+      
+      <!-- Hand-drawn Annotation (Scribble arrow pointing to hero) -->
+      <div class="handwritten-annotation hero-annotation">
+        <svg class="handwrite-arrow" viewBox="0 0 100 50" width="80" height="40" fill="none" stroke="var(--color-accent-terracotta)" stroke-width="1.5">
+          <path d="M5,40 Q40,10 85,25" />
+          <path d="M75,18 L85,25 L78,35" />
+        </svg>
+        <span class="handwrite-text">Capture the silent topography</span>
+      </div>
+    </section>
 
-      <!-- Bento Grid Layout -->
-      <div class="bento-grid">
+    <!-- Main Content Split Grid (Reference Image Layout 2) -->
+    <section id="index" class="split-grid-section">
+      <div class="split-container">
         
-        <!-- Bento Card 1: Basalt Monolith (Wide) -->
-        <div class="bento-card wide tall reveal-card">
-          <div class="bento-card-inner">
-            <div class="card-img-wrapper">
-              <img src="images/art_monolith.jpg" alt="Minimalist brutalist stone sculpture standing in a basalt landscape" class="card-img" loading="lazy">
-              <div class="card-img-overlay"></div>
-            </div>
-            <div class="card-content">
-              <div class="card-meta">
-                <span class="card-category">MONOLITH / STONE</span>
-                <span class="card-date">COORD // 45.89 N</span>
+        <!-- Left Column: Portrait & Text -->
+        <div class="grid-col-left reveal">
+          <div class="col-content-wrap">
+            <h2 class="sub-brand-title font-display">NARRATIVE</h2>
+            <p class="studio-intro font-serif">
+              Studio Narrative creates editorial travel scripts and cinematic films, mapping the silent dialogue between landscape topography and raw architectural objects.
+            </p>
+            
+            <div class="small-portrait-wrapper">
+              <img src="images/hero_travel.jpg" alt="Filmmaker mapping high-altitude trails" class="portrait-img">
+              
+              <!-- Hand-drawn circle annotation -->
+              <div class="handwritten-annotation portrait-annotation">
+                <svg class="handwrite-circle" viewBox="0 0 120 120" width="110" height="110" fill="none" stroke="var(--color-accent-terracotta)" stroke-width="1.5" stroke-dasharray="3 3">
+                  <ellipse cx="60" cy="60" rx="50" ry="40" transform="rotate(-15 60 60)" />
+                </svg>
+                <span class="handwrite-text text-side">Topography Scan</span>
               </div>
-              <div>
-                <h3 class="card-title font-heading">01 / TECTONIC STAND</h3>
-                <p class="card-desc">
-                  A 4-meter brutalist basalt block erected on the mountain ridge. A marker reflecting local tectonic tension and geological silence.
-                </p>
-              </div>
-              <button class="card-cta-btn" aria-label="View Project Details">↗</button>
             </div>
           </div>
         </div>
 
-        <!-- Bento Card 2: Fabric Blueprint (Narrow) -->
-        <div class="bento-card narrow tall reveal-card delay-100">
-          <div class="bento-card-inner">
-            <div class="card-img-wrapper">
-              <img src="images/art_texture.jpg" alt="Macro detail of structured black technical performance fabric" class="card-img" loading="lazy">
-              <div class="card-img-overlay"></div>
-            </div>
-            <div class="card-content">
-              <div class="card-meta">
-                <span class="card-category">TEXTILE / INTERFACE</span>
-                <span class="card-date">COORD // 32.11 N</span>
-              </div>
-              <div>
-                <h3 class="card-title font-heading">02 / MEMBRANE</h3>
-                <p class="card-desc">
-                  An exploration of technical grid structures. Analyzing high-altitude resistance and thermal shielding through abstract patterns.
-                </p>
-              </div>
-              <button class="card-cta-btn" aria-label="View Project Details">↗</button>
-            </div>
+        <!-- Right Column: Interactive Works Index -->
+        <div class="grid-col-right reveal">
+          <div class="index-header font-mono">
+            <span>SELECTED COMMISSIONS</span>
+            <span>[ TRAVEL & EDITING ]</span>
           </div>
-        </div>
 
-        <!-- Bento Card 3: Topographic Elevation (Full Width) -->
-        <div class="bento-card full reveal-card">
-          <div class="bento-card-inner">
-            <div class="card-img-wrapper" style="height: 480px;">
-              <img src="images/art_elevation.jpg" alt="Topographic contours and patterns carved into dark volcanic stone" class="card-img" loading="lazy">
-              <div class="card-img-overlay"></div>
-            </div>
-            <div class="card-content" style="flex-direction: row; align-items: flex-end; justify-content: space-between;">
-              <div style="max-width: 65%;">
-                <div class="card-meta" style="margin-bottom: 1rem;">
-                  <span class="card-category">TOPOGRAPHY / GRAPHIC</span>
-                  <span class="card-date">COORD // 47.93 N</span>
+          <div class="interactive-index-list">
+            
+            <!-- Index Item 1 (Amalfi Coast) -->
+            <div class="index-item active" data-img="images/amalfi_thumb.jpg" data-coords="COORD // 40.62 N" data-medium="16MM FILM + ROAD TRIP">
+              <div class="item-main-row">
+                <span class="item-name font-serif">AMALFI FRAGMENTS</span>
+                
+                <!-- Hover Thumbnail Strip -->
+                <div class="item-thumbs">
+                  <img src="images/amalfi_thumb.jpg" alt="Amalfi thumbnail" class="mini-thumb">
+                  <img src="images/hero_travel.jpg" alt="Amalfi thumbnail 2" class="mini-thumb">
                 </div>
-                <h3 class="card-title font-heading">03 / CONTOUR ENGRAVINGS</h3>
-                <p class="card-desc">
-                  Symmetrical coordinate systems carved into mountain slopes. A spatial intervention linking satellite elevation data to physical tactile stone.
-                </p>
+                
+                <span class="item-category font-mono">ITALY</span>
               </div>
-              <button class="card-cta-btn" aria-label="View Project Details">↗</button>
+              <div class="item-details font-mono">
+                <div class="detail-block">
+                  <span class="lbl">Itinerary Length:</span>
+                  <span class="val">08 Days / Tyrrhenian Route</span>
+                </div>
+                <div class="detail-block">
+                  <span class="lbl">Cinematography:</span>
+                  <span class="val">Arri SR3, Kodak Vision3 250D</span>
+                </div>
+                <div class="detail-block">
+                  <span class="lbl">Curation Spec:</span>
+                  <span class="val">Brutalist villas, cliff paths, vintage Alfa Romeo</span>
+                </div>
+              </div>
             </div>
+
+            <!-- Index Item 2 (Kyoto Temples) -->
+            <div class="index-item" data-img="images/kyoto_thumb.jpg" data-coords="COORD // 35.01 N" data-medium="8MM SILENT + TEMPLE ROUTE">
+              <div class="item-main-row">
+                <span class="item-name font-serif">KYOTO SHADOWS</span>
+                
+                <!-- Hover Thumbnail Strip -->
+                <div class="item-thumbs">
+                  <img src="images/kyoto_thumb.jpg" alt="Kyoto thumbnail" class="mini-thumb">
+                  <img src="images/hero_travel.jpg" alt="Kyoto thumbnail 2" class="mini-thumb">
+                </div>
+                
+                <span class="item-category font-mono">JAPAN</span>
+              </div>
+              <div class="item-details font-mono">
+                <div class="detail-block">
+                  <span class="lbl">Itinerary Length:</span>
+                  <span class="val">05 Days / Zen Garden Mapping</span>
+                </div>
+                <div class="detail-block">
+                  <span class="lbl">Cinematography:</span>
+                  <span class="val">Bolex H8, Black & White Tri-X</span>
+                </div>
+                <div class="detail-block">
+                  <span class="lbl">Curation Spec:</span>
+                  <span class="val">Minimalist temples, rock gardens, bamboo paths</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Index Item 3 (Sahara Nomadic Paths) -->
+            <div class="index-item" data-img="images/sahara_thumb.jpg" data-coords="COORD // 24.88 N" data-medium="16MM COLOR + INQUIRY GUIDE">
+              <div class="item-main-row">
+                <span class="item-name font-serif">SAHARA DUNES</span>
+                
+                <!-- Hover Thumbnail Strip -->
+                <div class="item-thumbs">
+                  <img src="images/sahara_thumb.jpg" alt="Sahara thumbnail" class="mini-thumb">
+                  <img src="images/hero_travel.jpg" alt="Sahara thumbnail 2" class="mini-thumb">
+                </div>
+                
+                <span class="item-category font-mono">MOROCCO</span>
+              </div>
+              <div class="item-details font-mono">
+                <div class="detail-block">
+                  <span class="lbl">Itinerary Length:</span>
+                  <span class="val">10 Days / Nomadic Crossings</span>
+                </div>
+                <div class="detail-block">
+                  <span class="lbl">Cinematography:</span>
+                  <span class="val">Aaton XTR, Kodak Ektachrome 100D</span>
+                </div>
+                <div class="detail-block">
+                  <span class="lbl">Curation Spec:</span>
+                  <span class="val">Dune topography, desert camps, star coordinates</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Index Item 4 (Patagonia Glaciers) -->
+            <div class="index-item" data-img="images/landscape_footer.jpg" data-coords="COORD // 50.15 S" data-medium="DIGITAL CINEMA + EXPEDITION">
+              <div class="item-main-row">
+                <span class="item-name font-serif">PATAGONIA ICE</span>
+                
+                <!-- Hover Thumbnail Strip -->
+                <div class="item-thumbs">
+                  <img src="images/landscape_footer.jpg" alt="Patagonia thumbnail" class="mini-thumb">
+                  <img src="images/hero_travel.jpg" alt="Patagonia thumbnail 2" class="mini-thumb">
+                </div>
+                
+                <span class="item-category font-mono">ARGENTINA</span>
+              </div>
+              <div class="item-details font-mono">
+                <div class="detail-block">
+                  <span class="lbl">Itinerary Length:</span>
+                  <span class="val">12 Days / Glacial Navigation</span>
+                </div>
+                <div class="detail-block">
+                  <span class="lbl">Cinematography:</span>
+                  <span class="val">Red V-Raptor, Cooke Anamorphic</span>
+                </div>
+                <div class="detail-block">
+                  <span class="lbl">Curation Spec:</span>
+                  <span class="val">Brutalist ice structures, volcanic wind mapping</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Technical Manifesto / Specs Section -->
-  <section id="specs">
-    <div class="container">
-      <div class="section-header reveal">
-        <div>
-          <div class="section-num">02 / BLUEPRINT</div>
-          <h2 class="section-title font-heading">TECHNICAL SPECIFICATIONS</h2>
-        </div>
-        <p class="section-sub">
-          The structural code behind the Altar° project. Measuring materials, environments, and precise elevation tools.
-        </p>
-      </div>
-
-      <div class="specs-grid">
-        <div class="specs-manifesto reveal">
-          <h3 class="font-heading">THE MOUNTAIN AS AN ALTAR</h3>
-          <p>
-            Altar° sees elevation as both a physical and conceptual process. We design objects not as decoration, but as tools that test the limits of structural stability and endurance. Our designs adapt to freezing temperatures, volcanic wind speeds, and severe tectonic shifts.
+    <!-- Manifesto & Specifications (Reference Image Layout 3 - Bottom Left) -->
+    <section id="about" class="about-specs-section">
+      <div class="split-container">
+        
+        <!-- Left Panel: Text manifesto -->
+        <div class="about-manifesto reveal">
+          <h2 class="large-manifesto-headline font-display">CREATING NEXT LEVEL DIGITAL PRODUCTS</h2>
+          <span class="manifesto-cursive font-heading">The Travel Curation & Cinematic Manifesto</span>
+          <p class="manifesto-body font-serif">
+            We do not design typical tourist itineraries or commercial films. Narrative approach treats every travel route as a storyboard and every editing frame as a coordinate point. We map luxury experiences where landscape topography meets artistic film composition.
           </p>
-          <p class="text-accent">
-            Elevation 3,200m — Where body and stone achieve perfect stillness.
-          </p>
+          <div class="editorial-specs-box font-mono">
+            <div class="spec-heading">TECHNICAL PROTOCOLS //</div>
+            <div class="spec-row"><span>Itinerary Curation</span><span>LIDAR Grid Mapping, Satellite Navigation</span></div>
+            <div class="spec-row"><span>Cinematography Core</span><span>16mm Analog Curation, Anamorphic Optics</span></div>
+            <div class="spec-row"><span>Audio Landscapes</span><span>Binaural Field Recordings of Winds & Tectonics</span></div>
+          </div>
         </div>
 
-        <div class="technical-table reveal delay-100">
-          <div class="tech-row">
-            <span class="tech-key">Geographic Site</span>
-            <span class="tech-val">Cascade Mountain Range, High Ridge Sector C</span>
+        <!-- Right Panel: Vertical Navigation & Scenic Landscape (Reference Image Layout 3 - Bottom Right) -->
+        <div class="about-navigation reveal">
+          <div class="nav-links-column">
+            <a href="#home" class="nav-row-link active">
+              <span class="num">01</span>
+              <span class="text">HOME</span>
+              <span class="arrow">→</span>
+            </a>
+            <a href="#index" class="nav-row-link">
+              <span class="num">02</span>
+              <span class="text">INDEX</span>
+              <span class="arrow">→</span>
+            </a>
+            <a href="#about" class="nav-row-link">
+              <span class="num">03</span>
+              <span class="text">SPECS</span>
+              <span class="arrow">→</span>
+            </a>
+            <a href="#contact" class="nav-row-link">
+              <span class="num">04</span>
+              <span class="text">CONTACT</span>
+              <span class="arrow">→</span>
+            </a>
           </div>
-          <div class="tech-row">
-            <span class="tech-key">Core Materials</span>
-            <div class="tech-val-grid">
-              <span class="tech-badge">Basalt Block</span>
-              <span class="tech-badge">Tectonic Carbon Fiber</span>
-              <span class="tech-badge">Anodized Black Aluminum</span>
-              <span class="tech-badge">Ripstop G-10 Grid</span>
-            </div>
-          </div>
-          <div class="tech-row">
-            <span class="tech-key">Mapping Tools</span>
-            <span class="tech-val">LIDAR Terrain Scanner, Drone Altitude Sensors, Coordinate Grid Projector</span>
-          </div>
-          <div class="tech-row">
-            <span class="tech-key">Climatic Resistance</span>
-            <div class="tech-val-grid">
-              <span class="tech-badge">Wind (Up to 110km/h)</span>
-              <span class="tech-badge">Thermal Range (-25°C to 40°C)</span>
-              <span class="tech-badge">UV Index Extreme</span>
-            </div>
-          </div>
-          <div class="tech-row">
-            <span class="tech-key">Design Protocol</span>
-            <span class="tech-val">Estúdio 017 — Precision Architectural Grid V2</span>
+
+          <!-- Rolling Hills Landscape Image Beneath Vertical Navigation -->
+          <div class="scenic-footer-image-wrapper">
+            <img src="images/landscape_footer.jpg" alt="Rolling green hills overlooking ocean" class="scenic-img">
           </div>
         </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact & Signal Transmission Section -->
-  <section id="contact">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <div>
-            <div class="section-num">03 / CONTACT</div>
-            <h2 class="contact-headline font-display">TRANSMIT<br>SIGNAL</h2>
-          </div>
-          <div class="contact-channels">
-            <div class="channel">
-              <span class="channel-label">Direct Communication</span>
-              <a href="mailto:signal@altarproject.art" class="channel-link">signal@altarproject.art ↗</a>
-            </div>
-            <div class="channel">
-              <span class="channel-label">Studio Coordinates</span>
-              <a href="https://estudio017.com.br" target="_blank" rel="noopener noreferrer" class="channel-link">Estúdio 017 ↗</a>
-            </div>
-          </div>
+    <!-- Contact & Transmission Section -->
+    <section id="contact" class="contact-section reveal">
+      <div class="contact-container">
+        <div class="contact-header">
+          <h2 class="font-display">TRANSMIT SIGNAL</h2>
+          <span class="cursive-sub font-heading">Book an inquiry or custom travel film curation</span>
         </div>
-
-        <form id="contact-form" class="contact-form reveal delay-100">
-          <div class="form-group">
-            <label for="name" class="form-label">IDENTIFIER / NAME</label>
-            <input type="text" id="name" name="name" required class="form-input" placeholder="e.g. Explorer Alpha">
+        
+        <form id="contact-form" class="inquiry-form">
+          <div class="form-row-grid">
+            <div class="form-group">
+              <label for="name" class="font-mono">IDENTIFIER / NAME</label>
+              <input type="text" id="name" name="name" required class="form-input" placeholder="e.g. Explorer Alpha">
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="font-mono">SIGNAL FREQUENCY / EMAIL</label>
+              <input type="email" id="email" name="email" required class="form-input" placeholder="e.g. name@domain.com">
+            </div>
           </div>
           
           <div class="form-group">
-            <label for="email" class="form-label">SIGNAL FREQUENCY / EMAIL</label>
-            <input type="email" id="email" name="email" required class="form-input" placeholder="e.g. name@domain.com">
+            <label for="message" class="font-mono">SIGNAL CONTENT / MESSAGE & INQUIRY DETAILS</label>
+            <textarea id="message" name="message" required class="form-input" placeholder="Specify your route plans or film editing requests..."></textarea>
           </div>
           
-          <div class="form-group">
-            <label for="message" class="form-label">SIGNAL CONTENT / MESSAGE</label>
-            <textarea id="message" name="message" required class="form-input" placeholder="Enter transmission message details..."></textarea>
-          </div>
-          
-          <button type="submit" class="btn-primary">
-            <span>Transmit Signal</span>
-            <div class="btn-icon-wrap">↗</div>
+          <button type="submit" class="btn-submit font-mono">
+            <span>TRANSMIT INQUIRY</span>
+            <span class="arrow">↗</span>
           </button>
         </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-container">
-      <p>© 2026 ALTAR° PROJECT. ALL RIGHTS RESERVED. DESIGN BY ESTÚDIO 017.</p>
-      <div class="footer-nav">
-        <a href="#home">Top</a>
-        <a href="#works">Selected Works</a>
-        <a href="#specs">Specifications</a>
+    <!-- Footer -->
+    <footer class="footer font-mono">
+      <div class="footer-container">
+        <p>© 2026 NARRATIVE STUDIO. ALL RIGHTS RESERVED. DESIGN BY ESTÚDIO 017.</p>
+        <p>COORDINATE REGISTER SYTEM V1.04</p>
       </div>
-    </div>
-  </footer>
+    </footer>
+
+  </div>
 
   <script src="script.js"></script>
 </body>

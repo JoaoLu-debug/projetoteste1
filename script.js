@@ -1,36 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // --- NAVIGATION Hamburger Menu reveal ---
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
   
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
-    });
-
-    // Close menu when clicking link
-    const links = navLinks.querySelectorAll('a');
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        navLinks.classList.remove('active');
-      });
-    });
-  }
-
-  // --- HEADER RESIZE ON SCROLL ---
-  const header = document.querySelector('header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  }, { passive: true });
-
   // --- SCROLL-REVEAL OBSERVER ---
-  const revealElements = document.querySelectorAll('.reveal, .reveal-card');
+  const revealElements = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -47,18 +18,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- ACTIVE NAV LINK OBSERVER ---
   const sections = document.querySelectorAll('section');
-  const navLinksList = document.querySelectorAll('.nav-links a');
+  const navLinksList = document.querySelectorAll('.nav-col-links a');
+  const navRowLinks = document.querySelectorAll('.nav-row-link');
 
   window.addEventListener('scroll', () => {
     let currentSectionId = '';
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
+      const sectionTop = section.offsetTop - 150;
       if (window.scrollY >= sectionTop) {
         currentSectionId = section.getAttribute('id');
       }
     });
 
+    // Update main nav header links
     navLinksList.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${currentSectionId}`) {
+        link.classList.add('active');
+      }
+    });
+
+    // Update bottom navigation rows
+    navRowLinks.forEach(link => {
       link.classList.remove('active');
       if (link.getAttribute('href') === `#${currentSectionId}`) {
         link.classList.add('active');
@@ -66,10 +47,62 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { passive: true });
 
+  // --- INTERACTIVE INDEX LIST (Selected commissions) ---
+  const indexItems = document.querySelectorAll('.index-item');
+  const heroImage = document.querySelector('.hero-image');
+  const geoVal = document.getElementById('geo-val');
+
+  indexItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Remove active class from all other items
+      indexItems.forEach(otherItem => {
+        otherItem.classList.remove('active');
+      });
+      // Add active to current
+      item.classList.add('active');
+
+      // Update hero image preview when active item changes
+      const imgPath = item.getAttribute('data-img');
+      if (heroImage && imgPath) {
+        heroImage.style.opacity = '0.3';
+        setTimeout(() => {
+          heroImage.src = imgPath;
+          heroImage.style.opacity = '1';
+        }, 300);
+      }
+
+      // Update coordinates text dynamically to match project
+      const coords = item.getAttribute('data-coords');
+      if (geoVal && coords) {
+        geoVal.textContent = `COORDINATES: ${coords}`;
+      }
+    });
+
+    // Hover effect: pre-load coords or temp coordinate shift
+    item.addEventListener('mouseenter', () => {
+      const coords = item.getAttribute('data-coords');
+      if (geoVal && coords && !item.classList.contains('active')) {
+        geoVal.style.color = 'var(--color-accent-terracotta)';
+        geoVal.textContent = `TARGET: ${coords}`;
+      }
+    });
+
+    item.addEventListener('mouseleave', () => {
+      if (geoVal) {
+        geoVal.style.color = '';
+        // Revert to active item coords
+        const activeItem = document.querySelector('.index-item.active');
+        if (activeItem) {
+          geoVal.textContent = `COORDINATES: ${activeItem.getAttribute('data-coords')}`;
+        }
+      }
+    });
+  });
+
   // --- DYNAMIC ALTITUDE TRACKER ---
   const altitudeVal = document.getElementById('altitude-val');
   const minAltitude = 2100; // Starting altitude (m)
-  const maxAltitude = 3200; // Target summit elevation (m)
+  const maxAltitude = 3776; // Mt Fuji/Summits (m)
 
   function updateAltitude() {
     if (!altitudeVal) return;
@@ -82,77 +115,41 @@ document.addEventListener('DOMContentLoaded', () => {
     // Interpolate altitude
     const currentAltitude = Math.round(minAltitude + (scrollPercent * (maxAltitude - minAltitude)));
     
-    // Animate counter slightly with random technical jitter
-    const jitter = Math.random() > 0.85 ? Math.floor(Math.random() * 3) - 1 : 0;
+    // Animate counter slightly with random jitter (cinematic tech style)
+    const jitter = Math.random() > 0.85 ? Math.floor(Math.random() * 5) - 2 : 0;
     const displayAltitude = currentAltitude + jitter;
     
     altitudeVal.textContent = `${displayAltitude}M`;
   }
 
   window.addEventListener('scroll', updateAltitude, { passive: true });
-  // Initial run to set starting altitude
-  updateAltitude();
+  updateAltitude(); // Initial run
 
-  // --- MOUSE LATENCY COORDINATE TRACKER (HERO SECTION) ---
-  const geoVal = document.getElementById('geo-val');
-  const initialLat = 45.8918;
-  const initialLng = -120.3019;
-
-  window.addEventListener('mousemove', (e) => {
-    if (!geoVal) return;
-    
-    // Calculate percentage offset based on viewport
-    const xPct = e.clientX / window.innerWidth;
-    const yPct = e.clientY / window.innerHeight;
-    
-    // Map offset to fine geographic coordinate variation
-    const currentLat = (initialLat + (yPct * 0.005) - 0.0025).toFixed(4);
-    const currentLng = (initialLng + (xPct * 0.005) - 0.0025).toFixed(4);
-    
-    geoVal.textContent = `${currentLat}° N, ${Math.abs(currentLng).toFixed(4)}° W`;
-  });
-
-  // --- FORM INPUT FLOATING LABELS & VALIDATION ---
-  const formInputs = document.querySelectorAll('.form-input');
-  formInputs.forEach(input => {
-    // Basic placeholder check/styling on interact
-    input.addEventListener('focus', () => {
-      input.style.borderBottomColor = 'var(--color-accent)';
-    });
-    input.addEventListener('blur', () => {
-      if (input.value.trim() === '') {
-        input.style.borderBottomColor = 'var(--color-border)';
-      } else {
-        input.style.borderBottomColor = 'var(--color-border-active)';
-      }
-    });
-  });
-
+  // --- INQUIRY FORM INTERACTION ---
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       
-      const submitBtn = contactForm.querySelector('.btn-primary');
+      const submitBtn = contactForm.querySelector('.btn-submit');
       const submitText = submitBtn.querySelector('span');
       
       // Tactile Loading State
-      submitText.textContent = 'TRANSMITTING...';
+      submitText.textContent = 'TRANSMITTING SIGNAL...';
       submitBtn.style.opacity = '0.7';
       submitBtn.disabled = true;
       
       setTimeout(() => {
-        submitText.textContent = 'TRANSMITTED';
-        submitBtn.style.backgroundColor = 'var(--color-accent)';
+        submitText.textContent = 'TRANSMISSION COMPLETE';
+        submitBtn.style.backgroundColor = 'var(--color-accent-terracotta)';
         submitBtn.style.color = '#fff';
         submitBtn.style.opacity = '1';
         
-        // Reset after duration
         setTimeout(() => {
           contactForm.reset();
-          submitText.textContent = 'TRANSMIT SIGNAL';
-          submitBtn.style.backgroundColor = 'var(--color-text-primary)';
-          submitBtn.style.color = 'var(--color-bg-dark)';
+          submitText.textContent = 'TRANSMIT INQUIRY';
+          submitBtn.style.backgroundColor = 'var(--color-text-chocolate)';
+          submitBtn.style.color = 'var(--color-bg-ivory)';
           submitBtn.disabled = false;
         }, 3000);
       }, 1500);
