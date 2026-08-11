@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALTAR° — Technical Art Portfolio & Exploration</title>
+  <meta name="description" content="Altar° is a high-end luxury art portfolio and exploration platform merging brutalist sculpture, high-altitude landscape topography, and outdoor performance aesthetics.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fine Technical Grid Overlay (Visual structure) -->
+  <div class="grid-overlay">
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+  </div>
+
+  <!-- Dynamic Elevation/Altitude Counter -->
+  <div class="altitude-overlay">
+    <div class="altitude-dot"></div>
+    <span>ALTITUDE: <strong id="altitude-val">2100M</strong></span>
+  </div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-symbol"></span>
+        ALTAR°
+      </a>
+      <nav class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#works">Works</a>
+        <a href="#specs">Specs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content-block">
+          <div class="hero-tag">
+            <span class="hero-tag-dot"></span>
+            EXPEDITION ALTA-017 / COMPLETED
+          </div>
+          <h1 class="hero-title font-display">ALTAR°</h1>
+          <p class="hero-desc">
+            A luxury artistic project mapping the silent dialogue between high-altitude topography, brutalist geometries, and raw environmental elements. Designed as structural tools for mental elevation.
+          </p>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-item">
+            <span class="meta-label">COORDINATES</span>
+            <span class="meta-val" id="geo-val">45.8918° N, 120.3019° W</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">BASE ELEVATION</span>
+            <span class="meta-val">2,100 meters</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">MEDIUM</span>
+            <span class="meta-val">Brutalist Tectonic Art</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">CURATOR</span>
+            <span class="meta-val">Estúdio 017</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>SCROLL EXPEDITION</span>
+      <div class="scroll-indicator-line"></div>
+    </div>
+  </section>
+
+  <!-- Works Gallery Section -->
+  <section id="works">
+    <div class="container">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-num">01 / ARCHIVE</div>
+          <h2 class="section-title font-heading">SELECTED WORKS</h2>
+        </div>
+        <p class="section-sub">
+          A physical manifestation of landscape coordinates. Architectural objects placed on volcanic peaks and harsh mountain ridges.
+        </p>
+      </div>
+
+      <!-- Bento Grid Layout -->
+      <div class="bento-grid">
+        
+        <!-- Bento Card 1: Basalt Monolith (Wide) -->
+        <div class="bento-card wide tall reveal">
+          <div class="bento-card-inner">
+            <div class="card-img-wrapper">
+              <img src="images/art_monolith.jpg" alt="Minimalist brutalist stone sculpture standing in a basalt landscape" class="card-img" loading="lazy">
+              <div class="card-img-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="card-category">MONOLITH / STONE</span>
+                <span class="card-date">COORD // 45.89 N</span>
+              </div>
+              <div>
+                <h3 class="card-title font-heading">01 / TECTONIC STAND</h3>
+                <p class="card-desc">
+                  A 4-meter brutalist basalt block erected on the mountain ridge. A marker reflecting local tectonic tension and geological silence.
+                </p>
+              </div>
+              <button class="card-cta-btn" aria-label="View Project Details">↗</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 2: Fabric Blueprint (Narrow) -->
+        <div class="bento-card narrow tall reveal delay-100">
+          <div class="bento-card-inner">
+            <div class="card-img-wrapper">
+              <img src="images/art_texture.jpg" alt="Macro detail of structured black technical performance fabric" class="card-img" loading="lazy">
+              <div class="card-img-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="card-category">TEXTILE / INTERFACE</span>
+                <span class="card-date">COORD // 32.11 N</span>
+              </div>
+              <div>
+                <h3 class="card-title font-heading">02 / MEMBRANE</h3>
+                <p class="card-desc">
+                  An exploration of technical grid structures. Analyzing high-altitude resistance and thermal shielding through abstract patterns.
+                </p>
+              </div>
+              <button class="card-cta-btn" aria-label="View Project Details">↗</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 3: Topographic Elevation (Full Width) -->
+        <div class="bento-card full reveal">
+          <div class="bento-card-inner">
+            <div class="card-img-wrapper" style="height: 480px;">
+              <img src="images/art_elevation.jpg" alt="Topographic contours and patterns carved into dark volcanic stone" class="card-img" loading="lazy">
+              <div class="card-img-overlay"></div>
+            </div>
+            <div class="card-content" style="flex-direction: row; align-items: flex-end; justify-content: space-between;">
+              <div style="max-width: 65%;">
+                <div class="card-meta" style="margin-bottom: 1rem;">
+                  <span class="card-category">TOPOGRAPHY / GRAPHIC</span>
+                  <span class="card-date">COORD // 47.93 N</span>
+                </div>
+                <h3 class="card-title font-heading">03 / CONTOUR ENGRAVINGS</h3>
+                <p class="card-desc">
+                  Symmetrical coordinate systems carved into mountain slopes. A spatial intervention linking satellite elevation data to physical tactile stone.
+                </p>
+              </div>
+              <button class="card-cta-btn" aria-label="View Project Details">↗</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Manifesto / Specs Section -->
+  <section id="specs">
+    <div class="container">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-num">02 / BLUEPRINT</div>
+          <h2 class="section-title font-heading">TECHNICAL SPECIFICATIONS</h2>
+        </div>
+        <p class="section-sub">
+          The structural code behind the Altar° project. Measuring materials, environments, and precise elevation tools.
+        </p>
+      </div>
+
+      <div class="specs-grid">
+        <div class="specs-manifesto reveal">
+          <h3 class="font-heading">THE MOUNTAIN AS AN ALTAR</h3>
+          <p>
+            Altar° sees elevation as both a physical and conceptual process. We design objects not as decoration, but as tools that test the limits of structural stability and endurance. Our designs adapt to freezing temperatures, volcanic wind speeds, and severe tectonic shifts.
+          </p>
+          <p class="text-accent">
+            Elevation 3,200m — Where body and stone achieve perfect stillness.
+          </p>
+        </div>
+
+        <div class="technical-table reveal delay-100">
+          <div class="tech-row">
+            <span class="tech-key">Geographic Site</span>
+            <span class="tech-val">Cascade Mountain Range, High Ridge Sector C</span>
+          </div>
+          <div class="tech-row">
+            <span class="tech-key">Core Materials</span>
+            <div class="tech-val-grid">
+              <span class="tech-badge">Basalt Block</span>
+              <span class="tech-badge">Tectonic Carbon Fiber</span>
+              <span class="tech-badge">Anodized Black Aluminum</span>
+              <span class="tech-badge">Ripstop G-10 Grid</span>
+            </div>
+          </div>
+          <div class="tech-row">
+            <span class="tech-key">Mapping Tools</span>
+            <span class="tech-val">LIDAR Terrain Scanner, Drone Altitude Sensors, Coordinate Grid Projector</span>
+          </div>
+          <div class="tech-row">
+            <span class="tech-key">Climatic Resistance</span>
+            <div class="tech-val-grid">
+              <span class="tech-badge">Wind (Up to 110km/h)</span>
+              <span class="tech-badge">Thermal Range (-25°C to 40°C)</span>
+              <span class="tech-badge">UV Index Extreme</span>
+            </div>
+          </div>
+          <div class="tech-row">
+            <span class="tech-key">Design Protocol</span>
+            <span class="tech-val">Estúdio 017 — Precision Architectural Grid V2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Signal Transmission Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div>
+            <div class="section-num">03 / CONTACT</div>
+            <h2 class="contact-headline font-display">TRANSMIT<br>SIGNAL</h2>
+          </div>
+          <div class="contact-channels">
+            <div class="channel">
+              <span class="channel-label">Direct Communication</span>
+              <a href="mailto:signal@altarproject.art" class="channel-link">signal@altarproject.art ↗</a>
+            </div>
+            <div class="channel">
+              <span class="channel-label">Studio Coordinates</span>
+              <a href="https://estudio017.com.br" target="_blank" rel="noopener noreferrer" class="channel-link">Estúdio 017 ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form reveal delay-100">
+          <div class="form-group">
+            <label for="name" class="form-label">IDENTIFIER / NAME</label>
+            <input type="text" id="name" name="name" required class="form-input" placeholder="e.g. Explorer Alpha">
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="form-label">SIGNAL FREQUENCY / EMAIL</label>
+            <input type="email" id="email" name="email" required class="form-input" placeholder="e.g. name@domain.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="message" class="form-label">SIGNAL CONTENT / MESSAGE</label>
+            <textarea id="message" name="message" required class="form-input" placeholder="Enter transmission message details..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn-primary">
+            <span>Transmit Signal</span>
+            <div class="btn-icon-wrap">↗</div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <p>© 2026 ALTAR° PROJECT. ALL RIGHTS RESERVED. DESIGN BY ESTÚDIO 017.</p>
+      <div class="footer-nav">
+        <a href="#home">Top</a>
+        <a href="#works">Selected Works</a>
+        <a href="#specs">Specifications</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
